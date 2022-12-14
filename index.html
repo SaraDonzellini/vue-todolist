@@ -37,7 +37,7 @@
                         </div>
                         <ul class="p-5">
                             <li v-for="(item, index) in buyingList" >
-                                <span class="span-item" :class="item.done ? 'strikethrough' : ''" @click="invertLineThrough()"> {{ item.text }} </span>
+                                <span class="span-item" :class="item.done ? 'strikethrough' : ''" @click="invertLineThrough(index)"> {{ item.text }} </span>
                                 <i class="fa-regular fa-circle-xmark" @click="removeFromList(item)"></i>
                             </li>
                         </ul>

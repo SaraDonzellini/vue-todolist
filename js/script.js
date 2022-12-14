@@ -5,6 +5,7 @@ createApp({
     data() {
         return {
             newItem : '',
+
             buyingList : [
                 {
                     text : "latte",
@@ -65,8 +66,13 @@ createApp({
                 
             }
         },
-        invertLineThrough(){
-            
+        invertLineThrough(index){
+            if (this.buyingList[index].done) {
+                this.buyingList[index].done = false
+
+            } else {
+                this.buyingList[index].done = true
+            }
         }
     },
     created(){
