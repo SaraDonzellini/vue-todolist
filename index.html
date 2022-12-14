@@ -16,7 +16,7 @@
     <div id="app">
 
         <header class="container">
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-12">
                     <h1>TodoList</h1>
 
@@ -25,15 +25,16 @@
         </header>
 
         <main class="container">
-            <div class="row">
+            <div class="row mt-3 p-4">
                 <div class="col-12">
                     <div class="box">
                         <h2>
                             Lista della spesa
                         </h2>
-                        <ul>
-                            <li v-for="item[index].text in buyingList">
-
+                        <ul class="p-5">
+                            <li v-for="(item, index) in buyingList">
+                                {{ item.text }}
+                                <i class="fa-regular fa-circle-xmark" @click="removeFromList(item)"></i>
                             </li>
                         </ul>
                     </div>
