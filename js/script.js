@@ -67,12 +67,14 @@ createApp({
             }
         },
         invertLineThrough(index){
-            if (this.buyingList[index].done) {
-                this.buyingList[index].done = false
+            this.buyingList[index].done = !this.buyingList[index].done
+            // if (this.buyingList[index].done) {
+            //     this.buyingList[index].done = false
 
-            } else {
-                this.buyingList[index].done = true
-            }
+            // } else {
+            //     this.buyingList[index].done = true
+            // }
+
         }
     },
     created(){
