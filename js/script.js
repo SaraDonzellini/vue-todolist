@@ -66,16 +66,7 @@ createApp({
             }
         },
         invertLineThrough(){
-            const trueOrFalse = document.querySelectorAll("span-item")
-            for (let i = 0; i < buyingList.length; i++) {
-                if (this.buyingList.done === true) {
-                    trueOrFalse.classlist[i].remove('strikethrough')
-                
-                } else {
-                    trueOrFalse.classlist[i].add('strikethrough')
-            }
-                
-            }
+            
         }
     },
     created(){

@@ -11,7 +11,7 @@ ul li {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
+    
 }
 
 ul li i:hover {
@@ -22,7 +22,9 @@ ul li i:hover {
 
 }
 
-
+ul li span{
+    cursor: pointer;
+}
 
 .strikethrough {
     text-decoration: line-through;
