@@ -36,8 +36,8 @@
                             <button class="btn btn-primary m-2" @click="addToList()">Aggiungi</button>
                         </div>
                         <ul class="p-5">
-                            <li v-for="(item, index) in buyingList" >
-                                <span :class="item.done ? 'strikethrough' : ''"> {{ item.text }} </span>
+                            <li v-for="(item, index) in buyingList" @click="invertLineThrough()">
+                                <span class="span-item" :class="item.done ? 'strikethrough' : ''"> {{ item.text }} </span>
                                 <i class="fa-regular fa-circle-xmark" @click="removeFromList(item)"></i>
                             </li>
                         </ul>
