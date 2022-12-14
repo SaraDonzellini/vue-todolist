@@ -4,7 +4,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-
+            newItem : '',
             Index : 0,
             buyingList : [
                 {
@@ -52,18 +52,18 @@ createApp({
         }
     },
     methods: {
-        strikeThrough(){
-            for (let i = 0; i < buyingList.length; i++) {
-                if (done){
-                    
-                }
-                
-            }
-        },
         removeFromList(itemToRemove){
             const listIndex = this.buyingList.indexOf(itemToRemove);
             if ( listIndex > -1 ) {
                 this.buyingList.splice(listIndex, 1)
+            }
+        },
+        addToList(){
+            if (this.newItem != '' && this.newItem.length >=2 ) {
+                let newObject = { text: this.newItem, done: false}
+                this.buyingList.push(newObject);
+                this.newItem = '';
+                
             }
         }
     },
